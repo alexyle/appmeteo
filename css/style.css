@@ -1,0 +1,241 @@
+@font-face {
+	font-family: 'lemonMILK';
+	src: url('LemonMilk.otf');
+}
+
+:root{
+    --bg-color: #F5F5F5;
+    --primary-color: #3EB650;
+}
+
+body{
+    letter-spacing: 2px;
+    background: var(--bg-color);
+    font-family: "lemonMILK", Helvetica, Arial, sans-serif;
+	align-items: center;
+	width: 275px;
+	height: 730px;
+	margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+h1{
+    color: var(--primary-color);
+    font-size: 20px;
+    text-align: center;
+}
+
+div.content{
+    height: 100%;
+    margin-top: 75px;
+    background-color: var(--primary-color);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+div.temp{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 85px;
+    height: 28px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.5);
+}
+
+div.hum{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.5);
+}
+
+div.wind{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 155px;
+    height: 160px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.5);
+}
+
+div.pres{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 110px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.5);
+}
+
+div.city{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;
+    max-width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.5);
+}
+
+h1.city{
+    color: var(--bg-color);
+}
+
+img.arrow{
+    height: 80px;
+    position: absolute;
+    top: 450px; left: 97.5px;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+img.illu{
+    height: 128px; 
+    width: 128px;
+    position: absolute;
+    left: 73.5px;
+    top: 50px; 
+    filter: drop-shadow(0px 7px 11px rgba(0, 0, 0, 0.5));
+    
+}
+
+h1.west{
+    position: absolute;
+    left: 80px;
+    top: 463px;
+}
+h1.east{
+    position: absolute;
+    left: 180px;
+    top: 463px;
+}
+h1.north{
+    position: absolute;
+    top: 430px;
+    left: 130px;
+    margin: 0px;
+}
+h1.south{
+    position: absolute;
+    top: 525px;
+    left: 132px;
+    margin: 0px;
+}
+
+
+.box{
+    position: absolute;
+    top: 250px;
+    left: 62px;
+    width: 300px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box .percent
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.box .percent svg
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.box .percent svg circle
+{
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+}
+
+.box .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 0) /100);
+    stroke: #369DEF;
+    transition: 0.5s;
+}
+
+.box .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+h2{
+    color: var(--primary-color);
+    font-size: 15px;
+    position: absolute;
+    top: 542.5px;
+    left: 100px;
+}
+
+/*
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+ul{
+    background-color: var(--bg-color);
+    font-size: 20px;
+    list-style-type: none;
+    margin-bottom: 0px;
+}
+
+li{
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s;
+}
+li:hover{
+    background-color: #8fec9d;
+}
+li:active{
+    background-color: #58d46b;
+}
+
+a.active{
+   color: #66e078;
+}

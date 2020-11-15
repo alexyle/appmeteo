@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "short_name": "MeteoTL66",
+    "name": "Meteo The Legende 66",
+    "author": "THE legende 66",
+    "description": "Meteo The Legende 66 allows you to have the weather when you want",
+    "version": "0.4.0",
+    "permissions": [
+        "http://cdn.weatherapi.com/*",
+        "notifications",
+        "geolocation"
+    ],
+    "browser_action": {
+        "default_icon" : "img/icon.png",
+        "default_popup": "index.html"
+    },
+    "icons": {
+      "128": "img/icon.png"
+    },
+    "background": {
+      "scripts": ["js/jquery.js", "js/background.js"]
+    }
+}
